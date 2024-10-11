@@ -1,0 +1,26 @@
+{
+  "name": "smart-bmi-calculator",
+  "version": "1.0.0",
+  "description": "smart bmi calculater with ai advice",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "smart bmi",
+    "bmi",
+    "ai bmi",
+    "ai bmi advice"
+  ],
+  "author": "ubeyid oumer",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
