@@ -1,10 +1,12 @@
 import express from "express";
 import { config } from "dotenv";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import cors from "cors";
 
 config();
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.post("/advice", async (req, res) => {
   try {

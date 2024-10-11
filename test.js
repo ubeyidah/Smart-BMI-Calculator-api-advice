@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/advice";
+const url = "http://localhost:8081/advice";
 const testData = {
   bmi: 22.5,
   age: 25,
