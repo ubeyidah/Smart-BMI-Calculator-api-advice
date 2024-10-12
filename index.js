@@ -17,7 +17,7 @@ app.post("/advice", async (req, res) => {
     const apiKey = process.env.API_KEY;
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-    const prompt = `Provide personalized health advice for a user based on the following data: BMI: ${bmi}, Age: ${age}, Gender: ${gender}, Height: ${height} cm, Weight: ${weight} kg. Please consider general health recommendations, diet, and fitness suggestions appropriate for the user's profile.`;
+    const prompt = `serve as personalized health advice for a user based on the following data: BMI: ${bmi}, Age: ${age}, Gender: ${gender}, Height: ${height} cm, Weight: ${weight} kg. Please consider general health recommendations, diet, and fitness suggestions appropriate for the user's profile as match as you can and please give important and detail advice information.`;
     const result = await model.generateContent(prompt);
     return res.status(200).json(result.response.text());
   } catch (error) {
